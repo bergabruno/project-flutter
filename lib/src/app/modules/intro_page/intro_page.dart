@@ -9,8 +9,14 @@ import 'package:sir/src/app/components/standard_form.dart';
 // ignore: use_key_in_widget_constructors
 class IntroPage extends StatelessWidget {
   @override Widget build(BuildContext context) {
-    return StandardPage(title: '', body: 
-    Column(children: [
+    return Scaffold(
+      body: Padding(padding: EdgeInsets.only(
+        left: AppPaddings.borderPadding,
+        right: AppPaddings.borderPadding,
+        top: AppPaddings.topPadding,
+        ),
+        child: SingleChildScrollView( child: 
+        Column(children: [
             GestureDetector(onTap: () {
                 Navigator.push(context,
                   MaterialPageRoute(builder: (context)=> CreatePage(),
@@ -29,7 +35,8 @@ class IntroPage extends StatelessWidget {
             StandardText(text: 'Curso: 3SIR'),
             ],
           ),
-          );
-
+          ),
+        ),
+    );
   }
 }
